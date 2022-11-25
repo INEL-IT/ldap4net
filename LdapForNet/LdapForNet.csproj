@@ -20,8 +20,15 @@
     <LangVersion>latest</LangVersion>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
+	<PackSymbols>false</PackSymbols>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\key.snk" Link="key.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NuGetizer" Version="0.9.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 </Project>
